@@ -1,5 +1,5 @@
 # LipReadingRecognition
-This project is prepare for the lip reading recognition of Computer Science and this is a very interesting project.
+This project is prepare for the lip reading recognition.
 The sample size of this data set was 46 people. A total of 0-9 10 numbers were recorded and stored in 10 compression packages named 0-9. The data naming rule in each package is number + sample number + recording number,For example, "N0_P01_T1" indicates the first recording of the first sample for the number 0. The following is the structure and content information of this data set:
 Data Structure:
 struct LandmarkPoint {
