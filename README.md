@@ -1,9 +1,10 @@
 # LipReadingRecognition
+
 Project Description：
 The project bases on Intel Realsense 3D camera, detecting and extracting the three-dimensional lip movement characteristics accurately, using long-term and short-term memory networks to achieve dynamic recognition of lip language, so that the system can recognize the user's lip content and dynamic characteristics to achieve silent Double password authentication.
 It can be widely used for various types of authentication.
 
-Due to the small number of public datasets in this field, we used the WPF programming of C# to call some of the realsense SDK's interfaces to record the 3D lip data feature set.Our team has undergone preliminary collation and now publishes the recorded code and this feature datasets.
+Due to the small number of public datasets in this field, we used the WPF programming of C# to call some of the realsense SDK's interfaces to record the 3D lip data feature set.Our team has undergone preliminary collation and now publishes the code of recording system  and this 3D lip-reading feature datasets.
 
 The sample size of this data set was 46 people. A total of 0-9 10 numbers were recorded and stored in 10 compression packages named 0-9. The data naming rule in each package is number + sample number + recording number,For example, "N0_P01_T1" indicates the first recording of the first sample for the number 0. The following is the structure and content information of this data set:
 
@@ -21,6 +22,7 @@ struct LandmarkPoint {
     PXCPointF32         image;             //The world coordinates of the landmark point, with units in meters.
 
 };	
+
 class LandmarkPointSource {
 
     Int32        index;        //The index that this landmark belongs.
@@ -28,42 +30,75 @@ class LandmarkPointSource {
     LandmarkType alias;        //The LandmarkType enumerator enumerates supported face landmark points.
 
 };
-The LandmarkType enumerator enumerates supported face landmark points.Content Information:
+
+The LandmarkType enumerator enumerates supported face landmark points.
+Content Information:
 {
 LANDMARK_NOT_NAMED			            Unspecified.
+
 LANDMARK_EYE_RIGHT_CENTER		        The center of the right eye.
+
 LANDMARK_EYE_LEFT_CENTER		        The center of the left eye.
+
 LANDMARK_EYELID_RIGHT_TOP		        The right eye lid points.
+
 LANDMARK_EYELID_RIGHT_BOTTOM
+
 LANDMARK_EYELID_RIGHT_RIGHT
+
 LANDMARK_EYELID_RIGHT_LEFT
+
 LANDMARK_EYELID_LEFT_TOP		        The left eye lid points.
+
 LANDMARK_EYELID_LEFT_BOTTOM
+
 LANDMARK_EYELID_LEFT_RIGHT
+
 LANDMARK_EYELID_LEFT_LEFT
+
 LANDMARK_EYEBROW_RIGHT_CENTER		    The right eye brow points.
+
 LANDMARK_EYEBROW_RIGHT_RIGHT
+
 LANDMARK_EYEBROW_RIGHT_LEFT		
+
 LANDMARK_EYEBROW_LEFT_CENTER		    The left eye brow points.
+
 LANDMARK_EYEBROW_LEFT_RIGHT
+
 LANDMARK_EYEBROW_LEFT_LEFT
+
 LANDMARK_NOSE_TIP			The nose points.
+
 LANDMARK_NOSE_TOP
+
 LANDMARK_NOSE_BOTTOM               （The nose top point is the top 					 
 LANDMARK_NOSE_RIGHT			           most point of the nose vertically.
 LANDMARK_NOSE_LEFT			           The nose tip point is the top most point of the nose in the Z dimension.）
+
 LANDMARK_LIP_RIGHT			           The middle lip points.
+
 LANDMARK_LIP_LEFT
+
 LANDMARK_UPPER_LIP_CENTER		       The upper lip points.
+
 LANDMARK_UPPER_LIP_RIGHT
+
 LANDMARK_UPPER_LIP_LEFT
+
 LANDMARK_LOWER_LIP_CENTER		       The lower lip points
+
 LANDMARK_LOWER_LIP_RIGHT
+
 LADNMARK_LOWER_LIP_LEFT
+
 LADNMARK_FACE_BORDER_TOP_RIGHT		 The face border points
+
 LADNMARK_FACE_BORDER_TOP_LEFT
+
 LADNAMRK_CHIN				               The bottom chin point.
 };	
+
 struct PXCMPoint3DF32 {
 
     Single x;     //The x coordinate of the point.
@@ -73,6 +108,7 @@ struct PXCMPoint3DF32 {
     Single z;     //The z coordinate of the point.
     
 };
+
 struct PXCMPointF32 {
 
     Single x;     //The x coordinate of the image pixel.
@@ -95,6 +131,7 @@ Commercial application please contact
 author 1: Zhang Lumin
 13776285260
 1530805045@stu.suda.edu.cn
+
 Author 2: Wang Damu
 18862110140
 1527403001@stu.suda.edu.cn
